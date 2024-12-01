@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "NetGen"
+version = "0.1.0"
+description = "A python framework for Netlist generation"
+authors = ["ToonBettens <toon.bettens@outlook.com>"]
+license = "MIT"
+repository = "https://github.com/ToonBettens/NetGen"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+ruff = "^0.8.1"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+cache-dir = ".cache/ruff"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+cache_dir = ".cache/pytest"
